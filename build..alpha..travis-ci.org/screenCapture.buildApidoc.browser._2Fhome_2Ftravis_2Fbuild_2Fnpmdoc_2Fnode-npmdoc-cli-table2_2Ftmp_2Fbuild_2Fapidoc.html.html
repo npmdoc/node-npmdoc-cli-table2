@@ -1,0 +1,1453 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/jamestalmage/cli-table2">cli-table2 (v0.2.0)</a>
+</h1>
+<h4>Pretty unicode tables for the command line. Based on the original cli-table.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2">module cli-table2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell">
+            function <span class="apidocSignatureSpan">cli-table2.</span>cell
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-table2.</span>cell.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-table2.</span>layout_manager</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-table2.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2.cell">module cli-table2.cell</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.cell">
+            function <span class="apidocSignatureSpan">cli-table2.</span>cell
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.ColSpanCell">
+            function <span class="apidocSignatureSpan">cli-table2.cell.</span>ColSpanCell
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.RowSpanCell">
+            function <span class="apidocSignatureSpan">cli-table2.cell.</span>RowSpanCell
+            <span class="apidocSignatureSpan">(originalCell)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2.cell.prototype">module cli-table2.cell.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype._topLeftChar">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>_topLeftChar
+            <span class="apidocSignatureSpan">(offset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.draw">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>draw
+            <span class="apidocSignatureSpan">(lineNum, spanningCell)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.drawBottom">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawBottom
+            <span class="apidocSignatureSpan">(drawRight)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.drawEmpty">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawEmpty
+            <span class="apidocSignatureSpan">(drawRight, spanningCell)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.drawLine">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawLine
+            <span class="apidocSignatureSpan">(lineNum, drawRight, forceTruncationSymbol, spanningCell)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.drawTop">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawTop
+            <span class="apidocSignatureSpan">(drawRight)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.init">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>init
+            <span class="apidocSignatureSpan">(tableOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.mergeTableOptions">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>mergeTableOptions
+            <span class="apidocSignatureSpan">(tableOptions, cells)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.setOptions">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>setOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.stylizeLine">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>stylizeLine
+            <span class="apidocSignatureSpan">(left, content, right)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.cell.prototype.wrapWithStyleColors">
+            function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>wrapWithStyleColors
+            <span class="apidocSignatureSpan">(styleProperty, content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>x</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>y</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2.layout_manager">module cli-table2.layout_manager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.layout_manager.addRowSpanCells">
+            function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>addRowSpanCells
+            <span class="apidocSignatureSpan">(table)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.layout_manager.computeHeights">
+            function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>computeHeights
+            <span class="apidocSignatureSpan">(vals, table)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.layout_manager.computeWidths">
+            function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>computeWidths
+            <span class="apidocSignatureSpan">(vals, table)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.layout_manager.fillInTable">
+            function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>fillInTable
+            <span class="apidocSignatureSpan">(table)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.layout_manager.layoutTable">
+            function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>layoutTable
+            <span class="apidocSignatureSpan">(table)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.layout_manager.makeTableLayout">
+            function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>makeTableLayout
+            <span class="apidocSignatureSpan">(rows)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.layout_manager.maxWidth">
+            function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>maxWidth
+            <span class="apidocSignatureSpan">(table)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2.utils">module cli-table2.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.utils.colorizeLines">
+            function <span class="apidocSignatureSpan">cli-table2.utils.</span>colorizeLines
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.utils.mergeOptions">
+            function <span class="apidocSignatureSpan">cli-table2.utils.</span>mergeOptions
+            <span class="apidocSignatureSpan">(options, defaults)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.utils.pad">
+            function <span class="apidocSignatureSpan">cli-table2.utils.</span>pad
+            <span class="apidocSignatureSpan">(str, len, pad, dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.utils.repeat">
+            function <span class="apidocSignatureSpan">cli-table2.utils.</span>repeat
+            <span class="apidocSignatureSpan">(str, times)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.utils.strlen">
+            function <span class="apidocSignatureSpan">cli-table2.utils.</span>strlen
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.utils.truncate">
+            function <span class="apidocSignatureSpan">cli-table2.utils.</span>truncate
+            <span class="apidocSignatureSpan">(str, desiredLength, truncateChar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.utils.wordWrap">
+            function <span class="apidocSignatureSpan">cli-table2.utils.</span>wordWrap
+            <span class="apidocSignatureSpan">(maxLength, input)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-table2" id="apidoc.module.cli-table2">module cli-table2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell" id="apidoc.element.cli-table2.cell">
+        function <span class="apidocSignatureSpan">cli-table2.</span>cell
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cell(options){
+  this.setOptions(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-table2.cell" id="apidoc.module.cli-table2.cell">module cli-table2.cell</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.cell" id="apidoc.element.cli-table2.cell.cell">
+        function <span class="apidocSignatureSpan">cli-table2.</span>cell
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cell(options){
+  this.setOptions(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.ColSpanCell" id="apidoc.element.cli-table2.cell.ColSpanCell">
+        function <span class="apidocSignatureSpan">cli-table2.cell.</span>ColSpanCell
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ColSpanCell(){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.RowSpanCell" id="apidoc.element.cli-table2.cell.RowSpanCell">
+        function <span class="apidocSignatureSpan">cli-table2.cell.</span>RowSpanCell
+        <span class="apidocSignatureSpan">(originalCell)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RowSpanCell(originalCell){
+  this.originalCell = originalCell;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-table2.cell.prototype" id="apidoc.module.cli-table2.cell.prototype">module cli-table2.cell.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype._topLeftChar" id="apidoc.element.cli-table2.cell.prototype._topLeftChar">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>_topLeftChar
+        <span class="apidocSignatureSpan">(offset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_topLeftChar = function (offset){
+  var x = this.x+offset;
+  var leftChar;
+  if(this.y == 0){
+    leftChar = x == 0 ? 'topLeft' : (offset == 0 ? 'topMid' : 'top');
+  } else  {
+    if(x == 0){
+      leftChar = 'leftMid';
+    }
+    else {
+      leftChar = offset == 0 ? 'midMid' : 'bottomMid';
+      if(this.cells){  //TODO: cells should always exist - some tests don't fill it in though
+        var spanAbove = this.cells[this.y-1][x] instanceof Cell.ColSpanCell;
+        if(spanAbove){
+          leftChar = offset == 0 ? 'topMid' : 'mid';
+        }
+        if(offset == 0){
+          var i = 1;
+          while(this.cells[this.y][x-i] instanceof Cell.ColSpanCell){
+            i++;
+          }
+          if(this.cells[this.y][x-i] instanceof Cell.RowSpanCell){
+            leftChar = 'leftMid';
+          }
+        }
+      }
+    }
+  }
+  return this.chars[leftChar];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param drawRight - true if this method should render the right edge of the cell.
+ * @returns {String}
+ */
+Cell.prototype.drawTop = function(drawRight){
+var content = [];
+if(this.cells){  //TODO: cells should always exist - some tests don't fill it in though
+  _.forEach(this.widths,function(width,index){
+    content.push(this.<span class="apidocCodeKeywordSpan">_topLeftChar</span>(index));
+    content.push(
+      utils.repeat(this.chars[this.y == 0 ? 'top' : 'mid'],width)
+    );
+  },this);
+}
+else {
+  content.push(this._topLeftChar(0));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.draw" id="apidoc.element.cli-table2.cell.prototype.draw">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>draw
+        <span class="apidocSignatureSpan">(lineNum, spanningCell)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">draw = function (lineNum, spanningCell){
+  if(lineNum == 'top') return this.drawTop(this.drawRight);
+  if(lineNum == 'bottom') return this.drawBottom(this.drawRight);
+  var padLen = Math.max(this.height - this.lines.length, 0);
+  var padTop;
+  switch (this.vAlign){
+    case 'center':
+      padTop = Math.ceil(padLen / 2);
+      break;
+    case 'bottom':
+      padTop = padLen;
+      break;
+    default :
+      padTop = 0;
+  }
+  if( (lineNum &lt; padTop) || (lineNum &gt;= (padTop + this.lines.length))){
+    return this.drawEmpty(this.drawRight,spanningCell);
+  }
+  var forceTruncation = (this.lines.length &gt; this.height) &amp;&amp; (lineNum + 1 &gt;= this.height);
+  return this.drawLine(lineNum - padTop, this.drawRight, forceTruncation,spanningCell);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var originalY = this.originalCell.y;
+  this.cellOffset = y - originalY;
+  this.offset = findDimension(tableOptions.rowHeights,originalY,this.cellOffset);
+};
+
+RowSpanCell.prototype.draw = function(lineNum){
+  if(lineNum == 'top'){
+    return this.originalCell.<span class="apidocCodeKeywordSpan">draw</span>(this.offset,this.cellOffset);
+  }
+  if(lineNum == 'bottom'){
+    return this.originalCell.draw('bottom');
+  }
+  return this.originalCell.draw(this.offset + 1 + lineNum);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.drawBottom" id="apidoc.element.cli-table2.cell.prototype.drawBottom">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawBottom
+        <span class="apidocSignatureSpan">(drawRight)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawBottom = function (drawRight){
+  var left = this.chars[this.x == 0 ? 'bottomLeft' : 'bottomMid'];
+  var content = utils.repeat(this.chars.bottom,this.width);
+  var right = drawRight ? this.chars['bottomRight'] : '';
+  return this.wrapWithStyleColors('border',left + content + right);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param lineNum - can be `top`, `bottom` or a numerical line number.
+ * @param spanningCell - will be a number if being called from a RowSpanCell, and will represent how
+ * many rows below it's being called from. Otherwise it's undefined.
+ * @returns {String} The representation of this line.
+ */
+Cell.prototype.draw = function(lineNum,spanningCell){
+if(lineNum == 'top') return this.drawTop(this.drawRight);
+if(lineNum == 'bottom') return this.<span class="apidocCodeKeywordSpan">drawBottom</span>(this.drawRight);
+var padLen = Math.max(this.height - this.lines.length, 0);
+var padTop;
+switch (this.vAlign){
+  case 'center':
+    padTop = Math.ceil(padLen / 2);
+    break;
+  case 'bottom':
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.drawEmpty" id="apidoc.element.cli-table2.cell.prototype.drawEmpty">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawEmpty
+        <span class="apidocSignatureSpan">(drawRight, spanningCell)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawEmpty = function (drawRight, spanningCell){
+  var left = this.chars[this.x == 0 ? 'left' : 'middle'];
+  if(this.x &amp;&amp; spanningCell &amp;&amp; this.cells){
+    var cellLeft = this.cells[this.y+spanningCell][this.x-1];
+    while(cellLeft instanceof ColSpanCell){
+      cellLeft = this.cells[cellLeft.y][cellLeft.x-1];
+    }
+    if(!(cellLeft instanceof RowSpanCell)){
+      left = this.chars['rightMid'];
+    }
+  }
+  var right = (drawRight ? this.chars['right'] : '');
+  var content = utils.repeat(' ',this.width);
+  return this.stylizeLine(left , content , right);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   case 'bottom':
+     padTop = padLen;
+     break;
+   default :
+     padTop = 0;
+ }
+ if( (lineNum &lt; padTop) || (lineNum &gt;= (padTop + this.lines.length))){
+   return this.<span class="apidocCodeKeywordSpan">drawEmpty</span>(this.drawRight,spanningCell);
+ }
+ var forceTruncation = (this.lines.length &gt; this.height) &amp;&amp; (lineNum + 1 &gt;= this.height);
+ return this.drawLine(lineNum - padTop, this.drawRight, forceTruncation,spanningCell);
+};
+
+/**
+* Renders the top line of the cell.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.drawLine" id="apidoc.element.cli-table2.cell.prototype.drawLine">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawLine
+        <span class="apidocSignatureSpan">(lineNum, drawRight, forceTruncationSymbol, spanningCell)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawLine = function (lineNum, drawRight, forceTruncationSymbol, spanningCell){
+  var left = this.chars[this.x == 0 ? 'left' : 'middle'];
+  if(this.x &amp;&amp; spanningCell &amp;&amp; this.cells){
+    var cellLeft = this.cells[this.y+spanningCell][this.x-1];
+    while(cellLeft instanceof ColSpanCell){
+      cellLeft = this.cells[cellLeft.y][cellLeft.x-1];
+    }
+    if(!(cellLeft instanceof RowSpanCell)){
+      left = this.chars['rightMid'];
+    }
+  }
+  var leftPadding = utils.repeat(' ', this.paddingLeft);
+  var right = (drawRight ? this.chars['right'] : '');
+  var rightPadding = utils.repeat(' ', this.paddingRight);
+  var line = this.lines[lineNum];
+  var len = this.width - (this.paddingLeft + this.paddingRight);
+  if(forceTruncationSymbol) line += this.truncate || 'â€¦';
+  var content = utils.truncate(line,len,this.truncate);
+  content = utils.pad(content, len, ' ', this.hAlign);
+  content = leftPadding + content + rightPadding;
+  return this.stylizeLine(left,content,right);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   default :
+     padTop = 0;
+ }
+ if( (lineNum &lt; padTop) || (lineNum &gt;= (padTop + this.lines.length))){
+   return this.drawEmpty(this.drawRight,spanningCell);
+ }
+ var forceTruncation = (this.lines.length &gt; this.height) &amp;&amp; (lineNum + 1 &gt;= this.height);
+ return this.<span class="apidocCodeKeywordSpan">drawLine</span>(lineNum - padTop, this.drawRight, forceTruncation,spanningCell);
+};
+
+/**
+* Renders the top line of the cell.
+* @param drawRight - true if this method should render the right edge of the cell.
+* @returns {String}
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.drawTop" id="apidoc.element.cli-table2.cell.prototype.drawTop">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>drawTop
+        <span class="apidocSignatureSpan">(drawRight)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawTop = function (drawRight){
+  var content = [];
+  if(this.cells){  //TODO: cells should always exist - some tests don't fill it in though
+    _.forEach(this.widths,function(width,index){
+      content.push(this._topLeftChar(index));
+      content.push(
+        utils.repeat(this.chars[this.y == 0 ? 'top' : 'mid'],width)
+      );
+    },this);
+  }
+  else {
+    content.push(this._topLeftChar(0));
+    content.push(utils.repeat(this.chars[this.y == 0 ? 'top' : 'mid'],this.width));
+  }
+  if(drawRight){
+    content.push(this.chars[this.y == 0 ? 'topRight' : 'rightMid']);
+  }
+  return this.wrapWithStyleColors('border',content.join(''));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * This default implementation defers to methods `drawTop`, `drawBottom`, `drawLine` and `drawEmpty`.
+ * @param lineNum - can be `top`, `bottom` or a numerical line number.
+ * @param spanningCell - will be a number if being called from a RowSpanCell, and will represent how
+ * many rows below it's being called from. Otherwise it's undefined.
+ * @returns {String} The representation of this line.
+ */
+Cell.prototype.draw = function(lineNum,spanningCell){
+if(lineNum == 'top') return this.<span class="apidocCodeKeywordSpan">drawTop</span>(this.drawRight);
+if(lineNum == 'bottom') return this.drawBottom(this.drawRight);
+var padLen = Math.max(this.height - this.lines.length, 0);
+var padTop;
+switch (this.vAlign){
+  case 'center':
+    padTop = Math.ceil(padLen / 2);
+    break;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.init" id="apidoc.element.cli-table2.cell.prototype.init">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>init
+        <span class="apidocSignatureSpan">(tableOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (tableOptions){
+  var x = this.x;
+  var y = this.y;
+  this.widths = tableOptions.colWidths.slice(x, x + this.colSpan);
+  this.heights = tableOptions.rowHeights.slice(y, y + this.rowSpan);
+  this.width = _.reduce(this.widths,sumPlusOne);
+  this.height = _.reduce(this.heights,sumPlusOne);
+
+  this.hAlign = this.options.hAlign || tableOptions.colAligns[x];
+  this.vAlign = this.options.vAlign || tableOptions.rowAligns[y];
+
+  this.drawRight = x + this.colSpan == tableOptions.colWidths.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.mergeTableOptions" id="apidoc.element.cli-table2.cell.prototype.mergeTableOptions">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>mergeTableOptions
+        <span class="apidocSignatureSpan">(tableOptions, cells)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeTableOptions = function (tableOptions, cells){
+  this.cells = cells;
+
+  var optionsChars = this.options.chars || {};
+  var tableChars = tableOptions.chars;
+  var chars = this.chars = {};
+  _.forEach(CHAR_NAMES,function(name){
+     setOption(optionsChars,tableChars,name,chars);
+  });
+
+  this.truncate = this.options.truncate || tableOptions.truncate;
+
+  var style = this.options.style = this.options.style || {};
+  var tableStyle = tableOptions.style;
+  setOption(style, tableStyle, 'padding-left', this);
+  setOption(style, tableStyle, 'padding-right', this);
+  this.head = style.head || tableStyle.head;
+  this.border = style.border || tableStyle.border;
+
+  var fixedWidth = tableOptions.colWidths[this.x];
+  if(tableOptions.wordWrap &amp;&amp; fixedWidth){
+    fixedWidth -= this.paddingLeft + this.paddingRight;
+    this.lines = utils.colorizeLines(utils.wordWrap(fixedWidth,this.content));
+  }
+  else {
+    this.lines = utils.colorizeLines(this.content.split('\n'));
+  }
+
+  this.desiredWidth = utils.strlen(this.content) + this.paddingLeft + this.paddingRight;
+  this.desiredHeight = this.lines.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.setOptions" id="apidoc.element.cli-table2.cell.prototype.setOptions">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>setOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOptions = function (options){
+  if(_.isString(options) || _.isNumber(options) || _.isBoolean(options)){
+    options = {content:''+options};
+  }
+  options = options || {};
+  this.options = options;
+  var content = options.content;
+  if (_.isString(content) || _.isNumber(content) || _.isBoolean(content)) {
+    this.content = String(content);
+  } else if (!content) {
+    this.content = '';
+  } else {
+    throw new Error('Content needs to be a primitive, got: ' + (typeof  content));
+  }
+  this.colSpan = options.colSpan || 1;
+  this.rowSpan = options.rowSpan || 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * A representation of a cell within the table.
+ * Implementations must have `init` and `draw` methods,
+ * as well as `colSpan`, `rowSpan`, `desiredHeight` and `desiredWidth` properties.
+ * @param options
+ * @constructor
+ */
+function Cell(options){
+this.<span class="apidocCodeKeywordSpan">setOptions</span>(options);
+}
+
+Cell.prototype.setOptions = function(options){
+if(_.isString(options) || _.isNumber(options) || _.isBoolean(options)){
+  options = {content:''+options};
+}
+options = options || {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.stylizeLine" id="apidoc.element.cli-table2.cell.prototype.stylizeLine">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>stylizeLine
+        <span class="apidocSignatureSpan">(left, content, right)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stylizeLine = function (left, content, right){
+  left = this.wrapWithStyleColors('border',left);
+  right = this.wrapWithStyleColors('border',right);
+  if(this.y === 0){
+    content = this.wrapWithStyleColors('head',content);
+  }
+  return left + content + right;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var rightPadding = utils.repeat(' ', this.paddingRight);
+var line = this.lines[lineNum];
+var len = this.width - (this.paddingLeft + this.paddingRight);
+if(forceTruncationSymbol) line += this.truncate || 'â€¦';
+var content = utils.truncate(line,len,this.truncate);
+content = utils.pad(content, len, ' ', this.hAlign);
+content = leftPadding + content + rightPadding;
+return this.<span class="apidocCodeKeywordSpan">stylizeLine</span>(left,content,right);
+};
+
+Cell.prototype.stylizeLine = function(left,content,right){
+left = this.wrapWithStyleColors('border',left);
+right = this.wrapWithStyleColors('border',right);
+if(this.y === 0){
+  content = this.wrapWithStyleColors('head',content);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.cell.prototype.wrapWithStyleColors" id="apidoc.element.cli-table2.cell.prototype.wrapWithStyleColors">
+        function <span class="apidocSignatureSpan">cli-table2.cell.prototype.</span>wrapWithStyleColors
+        <span class="apidocSignatureSpan">(styleProperty, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrapWithStyleColors = function (styleProperty, content){
+  if(this[styleProperty] &amp;&amp; this[styleProperty].length){
+    try {
+      var colors = require('colors/safe');
+      for(var i = this[styleProperty].length - 1; i &gt;= 0; i--){
+        colors = colors[this[styleProperty][i]];
+      }
+      return colors(content);
+    } catch (e) {
+      return content;
+    }
+  }
+  else {
+    return content;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+else {
+  content.push(this._topLeftChar(0));
+  content.push(utils.repeat(this.chars[this.y == 0 ? 'top' : 'mid'],this.width));
+}
+if(drawRight){
+  content.push(this.chars[this.y == 0 ? 'topRight' : 'rightMid']);
+}
+return this.<span class="apidocCodeKeywordSpan">wrapWithStyleColors</span>('border',content.join(''));
+};
+
+Cell.prototype._topLeftChar = function(offset){
+var x = this.x+offset;
+var leftChar;
+if(this.y == 0){
+  leftChar = x == 0 ? 'topLeft' : (offset == 0 ? 'topMid' : 'top');
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-table2.layout_manager" id="apidoc.module.cli-table2.layout_manager">module cli-table2.layout_manager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.layout_manager.addRowSpanCells" id="apidoc.element.cli-table2.layout_manager.addRowSpanCells">
+        function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>addRowSpanCells
+        <span class="apidocSignatureSpan">(table)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addRowSpanCells(table){
+  _.forEach(table,function(row,rowIndex){
+    _.forEach(row,function(cell){
+      for(var i = 1; i &lt; cell.rowSpan; i++){
+        var rowSpanCell = new RowSpanCell(cell);
+        rowSpanCell.x = cell.x;
+        rowSpanCell.y = cell.y + i;
+        rowSpanCell.colSpan = cell.colSpan;
+        insertCell(rowSpanCell,table[rowIndex+i]);
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.layout_manager.computeHeights" id="apidoc.element.cli-table2.layout_manager.computeHeights">
+        function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>computeHeights
+        <span class="apidocSignatureSpan">(vals, table)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">computeHeights = function (vals, table){
+  var result = [];
+  var spanners = [];
+  _.forEach(table,function(row){
+    _.forEach(row,function(cell){
+      if((cell[colSpan] || 1) &gt; 1){
+        spanners.push(cell);
+      }
+      else {
+        result[cell[x]] = Math.max(result[cell[x]] || 0, cell[desiredWidth] || 0, forcedMin);
+      }
+    });
+  });
+
+  _.forEach(vals,function(val,index){
+    if(_.isNumber(val)){
+      result[index] = val;
+    }
+  });
+
+  //_.forEach(spanners,function(cell){
+  for(var k = spanners.length - 1; k &gt;=0; k--){
+    var cell = spanners[k];
+    var span = cell[colSpan];
+    var col = cell[x];
+    var existingWidth = result[col];
+    var editableCols = _.isNumber(vals[col]) ? 0 : 1;
+    for(var i = 1; i &lt; span; i ++){
+      existingWidth += 1 + result[col + i];
+      if(!_.isNumber(vals[col + i])){
+        editableCols++;
+      }
+    }
+    if(cell[desiredWidth] &gt; existingWidth){
+      i = 0;
+      while(editableCols &gt; 0 &amp;&amp; cell[desiredWidth] &gt; existingWidth){
+        if(!_.isNumber(vals[col+i])){
+          var dif = Math.round( (cell[desiredWidth] - existingWidth) / editableCols );
+          existingWidth += dif;
+          result[col + i] += dif;
+          editableCols--;
+        }
+        i++;
+      }
+    }
+  }
+
+  _.extend(vals,result);
+  for(var j = 0; j &lt; vals.length; j++){
+    vals[j] = Math.max(forcedMin, vals[j] || 0);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.layout_manager.computeWidths" id="apidoc.element.cli-table2.layout_manager.computeWidths">
+        function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>computeWidths
+        <span class="apidocSignatureSpan">(vals, table)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">computeWidths = function (vals, table){
+  var result = [];
+  var spanners = [];
+  _.forEach(table,function(row){
+    _.forEach(row,function(cell){
+      if((cell[colSpan] || 1) &gt; 1){
+        spanners.push(cell);
+      }
+      else {
+        result[cell[x]] = Math.max(result[cell[x]] || 0, cell[desiredWidth] || 0, forcedMin);
+      }
+    });
+  });
+
+  _.forEach(vals,function(val,index){
+    if(_.isNumber(val)){
+      result[index] = val;
+    }
+  });
+
+  //_.forEach(spanners,function(cell){
+  for(var k = spanners.length - 1; k &gt;=0; k--){
+    var cell = spanners[k];
+    var span = cell[colSpan];
+    var col = cell[x];
+    var existingWidth = result[col];
+    var editableCols = _.isNumber(vals[col]) ? 0 : 1;
+    for(var i = 1; i &lt; span; i ++){
+      existingWidth += 1 + result[col + i];
+      if(!_.isNumber(vals[col + i])){
+        editableCols++;
+      }
+    }
+    if(cell[desiredWidth] &gt; existingWidth){
+      i = 0;
+      while(editableCols &gt; 0 &amp;&amp; cell[desiredWidth] &gt; existingWidth){
+        if(!_.isNumber(vals[col+i])){
+          var dif = Math.round( (cell[desiredWidth] - existingWidth) / editableCols );
+          existingWidth += dif;
+          result[col + i] += dif;
+          editableCols--;
+        }
+        i++;
+      }
+    }
+  }
+
+  _.extend(vals,result);
+  for(var j = 0; j &lt; vals.length; j++){
+    vals[j] = Math.max(forcedMin, vals[j] || 0);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.layout_manager.fillInTable" id="apidoc.element.cli-table2.layout_manager.fillInTable">
+        function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>fillInTable
+        <span class="apidocSignatureSpan">(table)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fillInTable(table){
+  var h_max = maxHeight(table);
+  var w_max = maxWidth(table);
+  for(var y = 0; y &lt; h_max; y++){
+    for(var x = 0; x &lt; w_max; x++){
+      if(!conflictExists(table,x,y)){
+        var opts = {x:x,y:y,colSpan:1,rowSpan:1};
+        x++;
+        while(x &lt; w_max &amp;&amp; !conflictExists(table,x,y)){
+          opts.colSpan++;
+          x++;
+        }
+        var y2 = y + 1;
+        while(y2 &lt; h_max &amp;&amp; allBlank(table,y2,opts.x,opts.x+opts.colSpan)){
+          opts.rowSpan++;
+          y2++;
+        }
+
+        var cell = new Cell(opts);
+        cell.x = opts.x;
+        cell.y = opts.y;
+        insertCell(cell,table[y]);
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.layout_manager.layoutTable" id="apidoc.element.cli-table2.layout_manager.layoutTable">
+        function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>layoutTable
+        <span class="apidocSignatureSpan">(table)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function layoutTable(table){
+  _.forEach(table,function(row,rowIndex){
+    _.forEach(row,function(cell,columnIndex){
+      cell.y = rowIndex;
+      cell.x = columnIndex;
+      for(var y = rowIndex; y &gt;= 0; y--){
+        var row2 = table[y];
+        var xMax = (y === rowIndex) ? columnIndex : row2.length;
+        for(var x = 0; x &lt; xMax; x++){
+          var cell2 = row2[x];
+          while(cellsConflict(cell,cell2)){
+            cell.x++;
+          }
+        }
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.layout_manager.makeTableLayout" id="apidoc.element.cli-table2.layout_manager.makeTableLayout">
+        function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>makeTableLayout
+        <span class="apidocSignatureSpan">(rows)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeTableLayout(rows){
+  var cellRows = generateCells(rows);
+  layoutTable(cellRows);
+  fillInTable(cellRows);
+  addRowSpanCells(cellRows);
+  addColSpanCells(cellRows);
+  return cellRows;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.layout_manager.maxWidth" id="apidoc.element.cli-table2.layout_manager.maxWidth">
+        function <span class="apidocSignatureSpan">cli-table2.layout_manager.</span>maxWidth
+        <span class="apidocSignatureSpan">(table)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function maxWidth(table) {
+  var mw = 0;
+  _.forEach(table, function (row) {
+    _.forEach(row, function (cell) {
+      mw = Math.max(mw,cell.x + (cell.colSpan || 1));
+    });
+  });
+  return mw;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cli-table2.utils" id="apidoc.module.cli-table2.utils">module cli-table2.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.utils.colorizeLines" id="apidoc.element.cli-table2.utils.colorizeLines">
+        function <span class="apidocSignatureSpan">cli-table2.utils.</span>colorizeLines
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function colorizeLines(input){
+  var state = {};
+  var output = [];
+  for(var i = 0; i &lt; input.length; i++){
+    var line = rewindState(state,input[i]) ;
+    state = readState(line);
+    var temp = _.extend({},state);
+    output.push(unwindState(temp,line));
+  }
+  return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+setOption(style, tableStyle, 'padding-right', this);
+this.head = style.head || tableStyle.head;
+this.border = style.border || tableStyle.border;
+
+var fixedWidth = tableOptions.colWidths[this.x];
+if(tableOptions.wordWrap &amp;&amp; fixedWidth){
+  fixedWidth -= this.paddingLeft + this.paddingRight;
+  this.lines = utils.<span class="apidocCodeKeywordSpan">colorizeLines</span>(utils.wordWrap(fixedWidth,this.content));
+}
+else {
+  this.lines = utils.colorizeLines(this.content.split('\n'));
+}
+
+this.desiredWidth = utils.strlen(this.content) + this.paddingLeft + this.paddingRight;
+this.desiredHeight = this.lines.length;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.utils.mergeOptions" id="apidoc.element.cli-table2.utils.mergeOptions">
+        function <span class="apidocSignatureSpan">cli-table2.utils.</span>mergeOptions
+        <span class="apidocSignatureSpan">(options, defaults)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mergeOptions(options, defaults){
+  options = options || {};
+  defaults = defaults || defaultOptions();
+  var ret = _.extend({}, defaults, options);
+  ret.chars = _.extend({}, defaults.chars, options.chars);
+  ret.style = _.extend({}, defaults.style, options.style);
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.utils.pad" id="apidoc.element.cli-table2.utils.pad">
+        function <span class="apidocSignatureSpan">cli-table2.utils.</span>pad
+        <span class="apidocSignatureSpan">(str, len, pad, dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pad(str, len, pad, dir) {
+  var length = strlen(str);
+  if (len + 1 &gt;= length) {
+    var padlen = len - length;
+    switch (dir) {
+      case 'right':
+        str = repeat(pad, padlen) + str;
+        break;
+
+      case 'center':
+        var right = Math.ceil((padlen) / 2);
+        var left = padlen - right;
+        str = repeat(pad, left) + str + repeat(pad, right);
+        break;
+
+      default :
+        str = str + repeat(pad,padlen);
+        break;
+    }
+  }
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var leftPadding = utils.repeat(' ', this.paddingLeft);
+var right = (drawRight ? this.chars['right'] : '');
+var rightPadding = utils.repeat(' ', this.paddingRight);
+var line = this.lines[lineNum];
+var len = this.width - (this.paddingLeft + this.paddingRight);
+if(forceTruncationSymbol) line += this.truncate || 'â€¦';
+var content = utils.truncate(line,len,this.truncate);
+content = utils.<span class="apidocCodeKeywordSpan">pad</span>(content, len, ' ', this.hAlign);
+content = leftPadding + content + rightPadding;
+return this.stylizeLine(left,content,right);
+};
+
+Cell.prototype.stylizeLine = function(left,content,right){
+left = this.wrapWithStyleColors('border',left);
+right = this.wrapWithStyleColors('border',right);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.utils.repeat" id="apidoc.element.cli-table2.utils.repeat">
+        function <span class="apidocSignatureSpan">cli-table2.utils.</span>repeat
+        <span class="apidocSignatureSpan">(str, times)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function repeat(str, times){
+  return Array(times + 1).join(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+Cell.prototype.drawTop = function(drawRight){
+var content = [];
+if(this.cells){  //TODO: cells should always exist - some tests don't fill it in though
+  _.forEach(this.widths,function(width,index){
+    content.push(this._topLeftChar(index));
+    content.push(
+      utils.<span class="apidocCodeKeywordSpan">repeat</span>(this.chars[this.y == 0 ? 'top' : 'mid'],width)
+    );
+  },this);
+}
+else {
+  content.push(this._topLeftChar(0));
+  content.push(utils.repeat(this.chars[this.y == 0 ? 'top' : 'mid'],this.width));
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.utils.strlen" id="apidoc.element.cli-table2.utils.strlen">
+        function <span class="apidocSignatureSpan">cli-table2.utils.</span>strlen
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strlen(str){
+  var code = codeRegex();
+  var stripped = ("" + str).replace(code,'');
+  var split = stripped.split("\n");
+  return split.reduce(function (memo, s) { return (stringWidth(s) &gt; memo) ? stringWidth(s) : memo }, 0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   fixedWidth -= this.paddingLeft + this.paddingRight;
+   this.lines = utils.colorizeLines(utils.wordWrap(fixedWidth,this.content));
+ }
+ else {
+   this.lines = utils.colorizeLines(this.content.split('\n'));
+ }
+
+ this.desiredWidth = utils.<span class="apidocCodeKeywordSpan">strlen</span>(this.content) + this.paddingLeft + this.paddingRight
+;
+ this.desiredHeight = this.lines.length;
+};
+
+/**
+* Each cell will have it's `x` and `y` values set by the `layout-manager` prior to
+* `init` being called;
+* @type {Number}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.utils.truncate" id="apidoc.element.cli-table2.utils.truncate">
+        function <span class="apidocSignatureSpan">cli-table2.utils.</span>truncate
+        <span class="apidocSignatureSpan">(str, desiredLength, truncateChar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function truncate(str, desiredLength, truncateChar){
+  truncateChar = truncateChar || 'â€¦';
+  var lengthOfStr = strlen(str);
+  if(lengthOfStr &lt;= desiredLength){
+    return str;
+  }
+  desiredLength -= strlen(truncateChar);
+
+  ret = truncateWidthWithAnsi(str, desiredLength);
+
+  return ret + truncateChar;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+var leftPadding = utils.repeat(' ', this.paddingLeft);
+var right = (drawRight ? this.chars['right'] : '');
+var rightPadding = utils.repeat(' ', this.paddingRight);
+var line = this.lines[lineNum];
+var len = this.width - (this.paddingLeft + this.paddingRight);
+if(forceTruncationSymbol) line += this.truncate || 'â€¦';
+var content = utils.<span class="apidocCodeKeywordSpan">truncate</span>(line,len,this.truncate);
+content = utils.pad(content, len, ' ', this.hAlign);
+content = leftPadding + content + rightPadding;
+return this.stylizeLine(left,content,right);
+};
+
+Cell.prototype.stylizeLine = function(left,content,right){
+left = this.wrapWithStyleColors('border',left);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cli-table2.utils.wordWrap" id="apidoc.element.cli-table2.utils.wordWrap">
+        function <span class="apidocSignatureSpan">cli-table2.utils.</span>wordWrap
+        <span class="apidocSignatureSpan">(maxLength, input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function multiLineWordWrap(maxLength, input){
+  var output = [];
+  input = input.split('\n');
+  for(var i = 0; i &lt; input.length; i++){
+    output.push.apply(output,wordWrap(maxLength,input[i]));
+  }
+  return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+setOption(style, tableStyle, 'padding-right', this);
+this.head = style.head || tableStyle.head;
+this.border = style.border || tableStyle.border;
+
+var fixedWidth = tableOptions.colWidths[this.x];
+if(tableOptions.wordWrap &amp;&amp; fixedWidth){
+  fixedWidth -= this.paddingLeft + this.paddingRight;
+  this.lines = utils.colorizeLines(utils.<span class="apidocCodeKeywordSpan">wordWrap</span>(fixedWidth,this.content));
+}
+else {
+  this.lines = utils.colorizeLines(this.content.split('\n'));
+}
+
+this.desiredWidth = utils.strlen(this.content) + this.paddingLeft + this.paddingRight;
+this.desiredHeight = this.lines.length;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
