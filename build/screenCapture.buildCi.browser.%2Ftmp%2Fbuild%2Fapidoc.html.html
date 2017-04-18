@@ -83,24 +83,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.table.prototype.toString">
-            function <span class="apidocSignatureSpan">cli-table2.</span>table.prototype.toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.toString">
-            function <span class="apidocSignatureSpan">cli-table2.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cli-table2.</span>cell.prototype</span>
 
         </li>
@@ -364,32 +346,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2.table.prototype.toString">module cli-table2.table.prototype.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.table.prototype.toString.toString">
-            function <span class="apidocSignatureSpan">cli-table2.table.prototype.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2.toString">module cli-table2.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.cli-table2.toString.toString">
-            function <span class="apidocSignatureSpan">cli-table2.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
     <li class="apidocModuleLi"><a href="#apidoc.module.cli-table2.utils">module cli-table2.utils</a><ol>
 
         <li>
@@ -504,99 +460,6 @@
   this.options = utils.mergeOptions(options);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.cli-table2.table.prototype.toString" id="apidoc.element.cli-table2.table.prototype.toString">
-        function <span class="apidocSignatureSpan">cli-table2.</span>table.prototype.toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">table.prototype.toString = function (){
-  var array = this;
-  var headersPresent = this.options.head &amp;&amp; this.options.head.length;
-  if(headersPresent){
-    array = [this.options.head];
-    if(this.length){
-      array.push.apply(array,this);
-    }
-  }
-  else {
-    this.options.style.head=[];
-  }
-
-  var cells = tableLayout.makeTableLayout(array);
-
-  _.forEach(cells,function(row){
-    _.forEach(row,function(cell){
-      cell.mergeTableOptions(this.options,cells);
-    },this);
-  },this);
-
-  tableLayout.computeWidths(this.options.colWidths,cells);
-  tableLayout.computeHeights(this.options.rowHeights,cells);
-
-  _.forEach(cells,function(row,rowIndex){
-    _.forEach(row,function(cell,cellIndex){
-      cell.init(this.options);
-    },this);
-  },this);
-
-  var result = [];
-
-  for(var rowIndex = 0; rowIndex &lt; cells.length; rowIndex++){
-    var row = cells[rowIndex];
-    var heightOfRow = this.options.rowHeights[rowIndex];
-
-    if(rowIndex === 0 || !this.options.style.compact || (rowIndex == 1 &amp;&amp; headersPresent)){
-      doDraw(row,'top',result);
-    }
-
-    for(var lineNum = 0; lineNum &lt; heightOfRow; lineNum++){
-      doDraw(row,lineNum,result);
-    }
-
-    if(rowIndex + 1 == cells.length){
-      doDraw(row,'bottom',result);
-    }
-  }
-
-  return result.join('\n');
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.cli-table2.toString" id="apidoc.element.cli-table2.toString">
-        function <span class="apidocSignatureSpan">cli-table2.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-// table is an Array, so you can `push`, `unshift`, `splice` and friends
-table.push(
-    ['First value', 'Second value']
-  , ['First value', 'Second value']
-);
-
-console.log(table.<span class="apidocCodeKeywordSpan">toString</span>());
-```
-
-### Vertical Tables
-```javascript
-var Table = require('cli-table2');
-var table = new Table();
-...</pre></li>
     </ul>
 
 
@@ -1489,72 +1352,6 @@ if(this.y == 0){
 
   return result.join('\n');
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-// table is an Array, so you can `push`, `unshift`, `splice` and friends
-table.push(
-    ['First value', 'Second value']
-  , ['First value', 'Second value']
-);
-
-console.log(table.<span class="apidocCodeKeywordSpan">toString</span>());
-```
-
-### Vertical Tables
-```javascript
-var Table = require('cli-table2');
-var table = new Table();
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.cli-table2.table.prototype.toString" id="apidoc.module.cli-table2.table.prototype.toString">module cli-table2.table.prototype.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.cli-table2.table.prototype.toString.toString" id="apidoc.element.cli-table2.table.prototype.toString.toString">
-        function <span class="apidocSignatureSpan">cli-table2.table.prototype.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-// table is an Array, so you can `push`, `unshift`, `splice` and friends
-table.push(
-    ['First value', 'Second value']
-  , ['First value', 'Second value']
-);
-
-console.log(table.<span class="apidocCodeKeywordSpan">toString</span>());
-```
-
-### Vertical Tables
-```javascript
-var Table = require('cli-table2');
-var table = new Table();
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.cli-table2.toString" id="apidoc.module.cli-table2.toString">module cli-table2.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.cli-table2.toString.toString" id="apidoc.element.cli-table2.toString.toString">
-        function <span class="apidocSignatureSpan">cli-table2.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 // table is an Array, so you can `push`, `unshift`, `splice` and friends
