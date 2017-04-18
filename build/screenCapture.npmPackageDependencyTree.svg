@@ -1,14 +1,17 @@
-<svg height="174" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="174" fill="#555" width="720"></rect>
+<svg height="222" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="222" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ cli-table2@0.2.0 </tspan>
-<tspan x="10" y="42">  ├── colors@1.1.2 </tspan>
-<tspan x="10" y="58">  ├── lodash@3.10.1 </tspan>
-<tspan x="10" y="74">  └─┬ string-width@1.0.2 </tspan>
-<tspan x="10" y="90">    ├── code-point-at@1.1.0 </tspan>
-<tspan x="10" y="106">    ├─┬ is-fullwidth-code-point@1.0.0 </tspan>
-<tspan x="10" y="122">    │ └── number-is-nan@1.0.1 </tspan>
-<tspan x="10" y="138">    └─┬ strip-ansi@3.0.1 </tspan>
-<tspan x="10" y="154">      └── ansi-regex@2.1.1</tspan>
+<tspan x="10" y="26">3 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ cli-table2@0.2.0 </tspan>
+<tspan x="10" y="90">  ├── colors@1.1.2 </tspan>
+<tspan x="10" y="106">  ├── lodash@3.10.1 </tspan>
+<tspan x="10" y="122">  └─┬ string-width@1.0.2 </tspan>
+<tspan x="10" y="138">    ├── code-point-at@1.1.0 </tspan>
+<tspan x="10" y="154">    ├─┬ is-fullwidth-code-point@1.0.0 </tspan>
+<tspan x="10" y="170">    │ └── number-is-nan@1.0.1 </tspan>
+<tspan x="10" y="186">    └─┬ strip-ansi@3.0.1 </tspan>
+<tspan x="10" y="202">      └── ansi-regex@2.1.1</tspan>
 </text>
 </svg>
